@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+
+body {
+	font-family: Montserrat;
+}
+
+
+.header {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: brown;
+	position: -webkit-sticky; /* Safari */
+	position: sticky;
+	top: 0;
+	text-align: left;
+	padding-left: 1vw;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+}
+
+
+.header_text {
+	font-size: 3vh;
+	padding: 1vh;
+	color: white;
+	text-decoration: none;
+}
+
+
+.title {
+	text-align: center;
+	background-color: green;
+	color: white;
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	font-size: 10vh;
+}
+
+
+.body_section_1 {
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	background-color: palegoldenrod;
+	color: black;
+}
+
+
+.body_section_1_text {
+	padding: 3vh;
+	background-color: transparent;
+}
+
+
+#about_image_section {
+	padding: 3vh;
+	background-color: transparent;
+}
+
+
+#about_image {
+	width: 60vh;
+	border: solid;
+	border-width: 1vh;
+	border-color: green;
+}
+
+
+.body_section_2 {
+	padding-top: 1vh;
+	padding-bottom: 1vh;
+	background-color: yellowgreen;
+	color: black;
+}
+
+
+#upload_text {
+	padding: 3vh;
+	background-color: transparent;
+}
+
+
+.caption {
+	font-size: 2vh;
+	text-align: center;
+}
+
+
+.link {
+	padding: 3vh;
+	color: green;
+	font-size: 5vh;
+}
+
+
+.horizontal {
+	display: flex;
+	flex-direction: row;
+}
+
+
+
+
+/* button code */
+
+
+/* Radial In */
+.hvr-radial-in {
+	display: inline-block;
+	vertical-align: middle;
+	-webkit-transform: perspective(1px) translateZ(0);
+	transform: perspective(1px) translateZ(0);
+	box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+	position: relative;
+	overflow: hidden;
+	background: green;
+	-webkit-transition-property: color;
+	transition-property: color;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+  }
+  .hvr-radial-in:before {
+	content: "";
+	position: absolute;
+	z-index: -1;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: palegoldenrod;
+	border-radius: 100%;
+	-webkit-transform: scale(2);
+	transform: scale(2);
+	-webkit-transition-property: transform;
+	transition-property: transform;
+	-webkit-transition-duration: 0.3s;
+	transition-duration: 0.3s;
+	-webkit-transition-timing-function: ease-out;
+	transition-timing-function: ease-out;
+  }
+  .hvr-radial-in:hover, .hvr-radial-in:focus, .hvr-radial-in:active {
+	color: white;
+  }
+  .hvr-radial-in:hover:before, .hvr-radial-in:focus:before, .hvr-radial-in:active:before {
+	-webkit-transform: scale(0);
+	transform: scale(0);
+  }

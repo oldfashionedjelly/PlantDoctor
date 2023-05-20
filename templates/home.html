@@ -1,0 +1,50 @@
+<head>
+	<meta charset= "UTF-8">
+	<title> The Plant Doctor </title>
+	<link rel="stylesheet" href="framework.css">
+	<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/media-queries.css">
+	<meta name="viewport" content="width=device-width">
+</head>
+
+
+<body>
+	<div class="header">
+		<div class="header_text">
+			<p> The Plant Doctor </p>
+		</div>
+	</div>
+
+
+	<div class="title">
+		<p class="title_text"> The Plant Doctor </p>
+	</div>
+
+
+	<div class="body_section_1 horizontal">
+		<div class="body_section_1_text">
+			<p>About the software</p>
+			<p>The intent of this software was to improve the sustainability of crops by allowing farmers to be able to indetify disease or malnourishments in their plants and crops. By using image recognition software, we  hope to decrease the number of crops lost to harmful diseases and infestations, and hope to help large farmers and small gardeners alike to protect their plants.</p>
+		</div>
+		<div id="about_image_section">
+			<img id="about_image" src="https://gardenerspath.com/wp-content/uploads/2019/08/Frogeye-spots-Botryosphaeria-obtusa-on-apple-leaf-FB.jpg">
+			<p class="caption"> An example of a plant sick with apple black rot </p>
+		</div>
+	</div>
+
+
+	<div class="body_section_2">
+		<div id="upload_text">
+			<p>Click on the "Choose File" button to upload your images:</p>
+			<form method="post" enctype="multipart/form-data" action="http://127.0.0.1:5000/predict">
+				<input type="file" name="image" accept="image/*">
+				<input type="submit" value="Predict">
+			  </form>
+			  
+			<form action="results.html" method="get">
+				<button type="submit" class="hvr-radial-in link">Click here for results</button>
+			</form>
+		</div>
+	</div>
+</body>
