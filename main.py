@@ -61,7 +61,7 @@ def predict():
 	input_data = np.expand_dims(processed_img, axis=0)
 	f = open("model/model_arch.json", "r")
 	model = model_from_json(f.read())
-	model.load_weights("model/my_model_weights.h5")
+	model.load_weights("model/model_weights.h5")
 	f.close()
 	data = preprocess_data(input_data)
 	
