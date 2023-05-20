@@ -6,6 +6,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Love+Ya+Like+A+Sister&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/media-queries.css">
 	<meta name="viewport" content="width=device-width">
+	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
 
@@ -35,15 +36,12 @@
 
 
 	<div class="body_section_2">
+		
 		<div id="upload_text">
 			<p>Click on the "Choose File" button to upload your images:</p>
 			<form method="post" enctype="multipart/form-data" action="http://127.0.0.1:5000/predict">
-				<input type="file" name="image" accept="image/*">
-				<input type="submit" value="Predict">
-			  </form>
-			  
-			<form action="results.html" method="get">
-				<button type="submit" class="hvr-radial-in link">Click here for results</button>
+				<input class="buttoon" type="file" name="image" accept="image/*">
+				<input class="buttoon" type="submit" value="Predict">
 			</form>
 		</div>
 	</div>

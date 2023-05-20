@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+@import url('https://fonts.googleapis.com/css?family=JosephineSans');
 
 
 body {
@@ -11,7 +13,7 @@ body {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: brown;
+	background-color: lightgrey;
 	position: -webkit-sticky; /* Safari */
 	position: sticky;
 	top: 0;
@@ -24,8 +26,7 @@ body {
 
 .header_text {
 	font-size: 3vh;
-	padding: 1vh;
-	color: white;
+	color: black;
 	text-decoration: none;
 }
 
@@ -37,6 +38,7 @@ body {
 	padding-top: 1vh;
 	padding-bottom: 1vh;
 	font-size: 10vh;
+	font-family: Oswald;
 }
 
 
@@ -85,6 +87,7 @@ body {
 .caption {
 	font-size: 2vh;
 	text-align: center;
+	font-family: JosephineSans;
 }
 
 
@@ -100,7 +103,10 @@ body {
 	flex-direction: row;
 }
 
-
+.buttoon {
+	font-size: 3vh;
+	font: Montserrat;
+}
 
 
 /* button code */
@@ -130,6 +136,7 @@ body {
 	right: 0;
 	bottom: 0;
 	background: palegoldenrod;
+	color: white;
 	border-radius: 100%;
 	-webkit-transform: scale(2);
 	transform: scale(2);
@@ -141,7 +148,7 @@ body {
 	transition-timing-function: ease-out;
   }
   .hvr-radial-in:hover, .hvr-radial-in:focus, .hvr-radial-in:active {
-	color: white;
+	color: black;
   }
   .hvr-radial-in:hover:before, .hvr-radial-in:focus:before, .hvr-radial-in:active:before {
 	-webkit-transform: scale(0);
