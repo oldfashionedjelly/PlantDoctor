@@ -1,20 +1,8 @@
 from flask import Flask, flash, redirect, url_for, render_template, request, jsonify
-import os
-import urllib.request
-from werkzeug.utils import secure_filename
-import requests
-from googlesearch import search
-import tensorflow as tf
-from tensorflow import keras
 from keras.models import Sequential, model_from_json
-from keras.applications.vgg16 import VGG16
-from keras.layers import Dense, Flatten
-from keras.preprocessing import image
 from keras.applications.vgg16 import preprocess_input
-from PIL import Image
 import numpy as np
 import cv2
-import json
 
 app = Flask(__name__)
 
@@ -33,22 +21,21 @@ disease_names = ['Apple___Apple_scab', 'Apple___Black_rot', 'Apple___Cedar_apple
 				 'Tomato___Tomato_mosaic_virus', 'Tomato___healthy'
 				 ]
 
-
-
-def search_plant_disease(disease):
-	query = f"{disease} plant disease care tips"
-	num_results = 5  
-	search_results = search(query, num_results=num_results, lang='en')
-	results = []
-	for result in search_results:
-		results.append(result)
-	return results
-
-
+# def search_plant_disease(disease):
+# 	query = f"{disease} plant disease care tips"
+# 	num_results = 5  
+# 	search_results = search(query, num_results=num_results, lang='en')
+# 	results = []
+# 	for result in search_results:
+# 		results.append(result)
+# 	return results
 
 def preprocess_data(input_data):
 	return cv2.resize(input_data[0], dsize = (224, 224), interpolation=cv2.INTER_CUBIC) * (1.0 / 255)
 
+@app.route('/home')
+def home():
+    return render_template('home.html')
 
 @app.route('/predict', methods=['POST'])
 def predict():
@@ -68,4 +55,10 @@ def predict():
 	predictions = model.predict(np.expand_dims(data, axis=0))
 	predicted_index = np.argmax(predictions)
 	predicted_label = disease_names[predicted_index]
-	return jsonify(label=predicted_label)
+	return redirect(url_for('show_results', prediction=predicted_label))
+	# return jsonify(label=predicted_label)
+
+@app.route('/results')
+def show_results():
+    result = request.args.get('prediction')
+    return render_template('results.html', prediction=result)
