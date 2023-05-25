@@ -25,11 +25,17 @@ body {
 
 
 .header_text {
-	font-size: 3vh;
+	font-size: 4.5vh;
+	font-weight: bold;
 	color: black;
 	text-decoration: none;
+	margin: 0;
+	text-align: center;
 }
 
+.logo {
+	width: 80px;
+}
 
 .title {
 	text-align: center;
@@ -41,20 +47,35 @@ body {
 	font-family: Oswald;
 }
 
+.three_sections {
+	columns: 3;
+}
 
+.image-container{
+	width: 120px;
+	height: 120px;
+	display: flex;
+	justify-content: center;
+	overflow: hidden;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+	object-fit: cover;
+}
 .body_section_1 {
 	padding-top: 1vh;
 	padding-bottom: 1vh;
-	background-color: palegoldenrod;
+	background-color: #ffe9aa;
 	color: black;
 }
 
-
-.body_section_1_text {
-	padding: 3vh;
-	background-color: transparent;
-}
-
+  
+  .active {
+	background-color: #04AA6D;
+  }
 
 #about_image_section {
 	padding: 3vh;
@@ -109,11 +130,53 @@ body {
 }
 
 
+body, html {
+    height: 100%;
+}
+
+.hero-image {
+  height: 70%;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("farm_bg.jpg");
+  background-color: #100a54;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.hero-text {
+  text-align: left;
+  position: absolute;
+  top: 50%;
+  left: 36%;
+  bottom:auto;
+  transform: translate(-50%, -50%);
+  color: rgb(255, 255, 255);
+}
+
+.hero-text button {
+	border: none;
+	outline: 0;
+	display: inline-block;
+	padding: 10px 25px;
+	margin-top: 15px;
+	color: black;
+	background-color: #ddd;
+	text-align: center;
+	cursor: pointer;
+  }
+
+.hero-text button:hover {
+	background-color: #555;
+	color: white;
+  }
+
+
 /* button code */
 
 
 /* Radial In */
-.hvr-radial-in {
+/* .hvr-radial-in {
 	display: inline-block;
 	vertical-align: middle;
 	-webkit-transform: perspective(1px) translateZ(0);
@@ -153,4 +216,4 @@ body {
   .hvr-radial-in:hover:before, .hvr-radial-in:focus:before, .hvr-radial-in:active:before {
 	-webkit-transform: scale(0);
 	transform: scale(0);
-  }
+  } */

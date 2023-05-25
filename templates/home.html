@@ -9,29 +9,73 @@
 	<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 </head>
 
+<style>
+	ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #082e68;
+	}
+	
+	li {
+	  float: left;
+	}
+	
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 22px 22px;
+	  text-decoration: none;
+	}
+	
+	li a:hover:not(.active) {
+	  background-color: #111;
+	}
+	
+	.active {
+	  background-color: #9effa2;
+	  color: #111;
+	  font-weight: bold;
+	}
+
+</style>
 
 <body>
-	<div class="header">
+	<ul>
+		<li><img src="logo.PNG" class="logo"></li>
+		<li><a class="active" href="#home">Home</a></li>
+		<li><a href="#">About</a></li>
+		<li><a href="#">Contact</a></li>
+	</ul>
+
+
+	<div class="hero-image">
+		<div class="hero-text">
+		  <h1 style="font-size:50px">Plant Doctor</h1>
+		  <p>Improve the sustainability of the agriculture industry by allowing farmers to be able to identify
+			 disease or malnourishments in their plants and crops. 
+			 By using image recognition software, we hope to decrease the number of crops 
+			 lost to harmful diseases and infestations, and to help large farmers 
+			 and small gardeners alike to protect their plants.</p>
+		  <button>Learn More</button>
+		</div>
+	</div>
+
+	<div class="body_section_1">
 		<div class="header_text">
-			<p> The Plant Doctor </p>
+			<p>Add later</p>
 		</div>
-	</div>
-
-
-	<div class="title">
-		<p class="title_text"> The Plant Doctor </p>
-	</div>
-
-
-	<div class="body_section_1 horizontal">
-		<div class="body_section_1_text">
-			<p>About the software</p>
-			<p>The intent of this software was to improve the sustainability of crops by allowing farmers to be able to indetify disease or malnourishments in their plants and crops. By using image recognition software, we  hope to decrease the number of crops lost to harmful diseases and infestations, and hope to help large farmers and small gardeners alike to protect their plants.</p>
+		<div class="three-sections">
+			<div class="image-container">
+				<img src="cam_icon.png" alt="Image">
+			</div>
 		</div>
-		<div id="about_image_section">
+		<!-- <div id="about_image_section">
 			<img id="about_image" src="https://gardenerspath.com/wp-content/uploads/2019/08/Frogeye-spots-Botryosphaeria-obtusa-on-apple-leaf-FB.jpg">
-			<p class="caption"> An example of a plant sick with apple black rot </p>
-		</div>
+			<p class="caption"> Apple Leaf with black rot.. </p>
+		</div> -->
 	</div>
 
 
