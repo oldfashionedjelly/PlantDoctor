@@ -63,30 +63,40 @@
 		</div>
 	</div>
 
-	<div class="body_section_1">
+	<div class="container">
 		<div class="header_text">
-			<p>Add later</p>
+			<p>Features</p>
 		</div>
-		<div class="three-sections">
-			<div class="image-container">
-				<img src="cam_icon.png" alt="Image">
+		<div class="row">
+			<div class="image-container column section">
+				<img src="cam_icon.PNG" alt="Image">
+				<p class="h2" style="padding-top:25px">1. Upload</p>
+				<p>Upload a picture of any plant that could potentially be diseased.</p>
+			</div>
+			<div class="image-container column section">
+				<img src="search_icon.png" alt="Image">
+				<p class="h2">2. Detect</p>
+				<p>Our image recognition model will determine what kind of disease your plant might have.</p>
+			</div>
+			<div class="image-container column section">
+				<img src="plant_care_icon.PNG" alt="Image">
+				<p class="h2" style="padding-top:13px">3. Treat</p>
+				<p>Get your search results and recieve educated insights on how to treat your plant!</p>
 			</div>
 		</div>
-		<!-- <div id="about_image_section">
-			<img id="about_image" src="https://gardenerspath.com/wp-content/uploads/2019/08/Frogeye-spots-Botryosphaeria-obtusa-on-apple-leaf-FB.jpg">
-			<p class="caption"> Apple Leaf with black rot.. </p>
-		</div> -->
 	</div>
 
 
-	<div class="body_section_2">
+	<div class="container" style="background-color: #88d8ff;">
 		
 		<div id="upload_text">
 			<p>Click on the "Choose File" button to upload your images:</p>
 			<form method="POST" action="http://127.0.0.1:5000/predict"" enctype="multipart/form-data">
-				<input class="buttoon" type="file" name="image" accept="image/*">
-				<input class="buttoon" type="submit" value="Predict">
+				<label for="fileInput" class="fileInputLabel">Choose a file</label>
+				<input type="file" id="fileInput" name="image" accept="image/*" class="fileInput" />
+				<input class="buttoon" type="submit" value="Predict" style="margin-left: 30px;">
 			</form>
 		</div>
 	</div>
+	
 </body>
